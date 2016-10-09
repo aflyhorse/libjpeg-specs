@@ -1,11 +1,11 @@
 Name:           libjpeg8
-Version:        8d
-Release:        2
+Version:        8d1
+Release:        3
 Summary:        Independent JPEG Group's free JPEG software
 
 License:        BSD
 URL:            http://www.infai.org/jpeg/
-Source0:        http://www.ijg.org/files/jpegsrc.v8d.tar.gz
+Source0:        http://jpegclub.org/support/files/jpegsrc.v8d1.tar.gz
 
 %description
 JPEG library is a free library with functions for handling the JPEG
@@ -42,7 +42,7 @@ the libjpeg-turbo implementaion, since they provides different
 versions of binaries under the same name.
 
 %prep
-%setup -n jpeg-8d -q
+%setup -n jpeg-8d1 -q
 
 %build
 %configure --disable-static
@@ -82,6 +82,8 @@ LD_LIBRARY_PATH=${RPM_BUILD_ROOT}/%{_libdir} make check
 %{_mandir}/man1/*
 
 %changelog
+* Sun Oct 9 2016 aflyhorse@hotmail.com
+- Bump to v8d1
 * Sun Oct 9 2016 aflyhorse@hotmail.com
 - Tweak version numbers.
 - Configure libtools to make it more friendly to rpath.
