@@ -1,6 +1,6 @@
 Name:           libjpeg8
 Version:        8d1
-Release:        3
+Release:        4
 Summary:        Independent JPEG Group's free JPEG software
 
 License:        BSD
@@ -16,9 +16,9 @@ it only provides the corresponding dynamic library.
 %package        devel
 Summary:        Development files for %{name}
 Requires:       %{name}%{?_isa} = %{version}-%{release}
-Conflicts:      libjpeg-turbo
-Conflicts:      libjpeg7
-Conflicts:      libjpeg9
+Conflicts:      libjpeg-turbo-devel
+Conflicts:      libjpeg7-devel
+Conflicts:      libjpeg9-devel
 
 %description    devel
 The %{name}-devel package contains libraries and header files for
@@ -30,9 +30,8 @@ versions of header files under the same time.
 %package        utils
 Summary:        Utility binaries for %{name}
 Requires:       %{name}%{?_isa} = %{version}-%{release}
-Conflicts:      libjpeg-turbo
-Conflicts:      libjpeg7
-Conflicts:      libjpeg9
+Conflicts:      libjpeg7-utils
+Conflicts:      libjpeg9-utils
 
 %description    utils
 The %{name}-utils package contains utility binaries which comes
@@ -83,7 +82,9 @@ LD_LIBRARY_PATH=${RPM_BUILD_ROOT}/%{_libdir} make check
 
 %changelog
 * Sun Oct 9 2016 aflyhorse@hotmail.com
-- Bump to v8d1
+- Conflict fix.
+* Sun Oct 9 2016 aflyhorse@hotmail.com
+- Bump to v8d1.
 * Sun Oct 9 2016 aflyhorse@hotmail.com
 - Tweak version numbers.
 - Configure libtools to make it more friendly to rpath.

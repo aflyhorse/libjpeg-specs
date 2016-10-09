@@ -1,6 +1,6 @@
 Name:           libjpeg9
 Version:        9b
-Release:        1
+Release:        2
 Summary:        Independent JPEG Group's free JPEG software
 
 License:        BSD
@@ -16,9 +16,9 @@ it only provides the corresponding dynamic library.
 %package        devel
 Summary:        Development files for %{name}
 Requires:       %{name}%{?_isa} = %{version}-%{release}
-Conflicts:      libjpeg-turbo
-Conflicts:      libjpeg7
-Conflicts:      libjpeg8
+Conflicts:      libjpeg-turbo-devel
+Conflicts:      libjpeg7-devel
+Conflicts:      libjpeg8-devel
 
 %description    devel
 The %{name}-devel package contains libraries and header files for
@@ -30,9 +30,8 @@ versions of header files under the same time.
 %package        utils
 Summary:        Utility binaries for %{name}
 Requires:       %{name}%{?_isa} = %{version}-%{release}
-Conflicts:      libjpeg-turbo
-Conflicts:      libjpeg7
-Conflicts:      libjpeg8
+Conflicts:      libjpeg7-utils
+Conflicts:      libjpeg8-utils
 
 %description    utils
 The %{name}-utils package contains utility binaries which comes
@@ -82,5 +81,7 @@ LD_LIBRARY_PATH=${RPM_BUILD_ROOT}/%{_libdir} make check
 %{_mandir}/man1/*
 
 %changelog
+* Sun Oct 9 2016 aflyhorse@hotmail.com
+- Conflict fix.
 * Sun Oct 9 2016 aflyhorse@hotmail.com
 - Initial implementation for v9.
