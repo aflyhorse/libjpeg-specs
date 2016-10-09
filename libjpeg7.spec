@@ -1,11 +1,11 @@
-Name:           libjpeg8
-Version:        8d
-Release:        2
+Name:           libjpeg7
+Version:        7
+Release:        1
 Summary:        Independent JPEG Group's free JPEG software
 
 License:        BSD
 URL:            http://www.infai.org/jpeg/
-Source0:        http://www.ijg.org/files/jpegsrc.v8d.tar.gz
+Source0:        http://www.ijg.org/files/jpegsrc.v7.tar.gz
 
 %description
 JPEG library is a free library with functions for handling the JPEG
@@ -17,7 +17,7 @@ it only provides the corresponding dynamic library.
 Summary:        Development files for %{name}
 Requires:       %{name}%{?_isa} = %{version}-%{release}
 Conflicts:      libjpeg-turbo
-Conflicts:      libjpeg7
+Conflicts:      libjpeg8
 Conflicts:      libjpeg9
 
 %description    devel
@@ -31,7 +31,7 @@ versions of header files under the same time.
 Summary:        Utility binaries for %{name}
 Requires:       %{name}%{?_isa} = %{version}-%{release}
 Conflicts:      libjpeg-turbo
-Conflicts:      libjpeg7
+Conflicts:      libjpeg8
 Conflicts:      libjpeg9
 
 %description    utils
@@ -42,7 +42,7 @@ the libjpeg-turbo implementaion, since they provides different
 versions of binaries under the same name.
 
 %prep
-%setup -n jpeg-8d -q
+%setup -n jpeg-7 -q
 
 %build
 %configure --disable-static
@@ -83,7 +83,4 @@ LD_LIBRARY_PATH=${RPM_BUILD_ROOT}/%{_libdir} make check
 
 %changelog
 * Sun Oct 9 2016 aflyhorse@hotmail.com
-- Tweak version numbers.
-- Configure libtools to make it more friendly to rpath.
-* Fri Sep 30 2016 aflyhorse@hotmail.com
-- Initial implementation for v8.
+- Initial implementation for v7.
