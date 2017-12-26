@@ -1,7 +1,7 @@
 Name:           libjpeg9
 Version:        9b
 Release:        2
-Summary:        Independent JPEG Group's free JPEG software
+Summary:        Independent JPEG Group's free JPEG software Version 9
 
 License:        BSD
 URL:            http://www.infai.org/jpeg/

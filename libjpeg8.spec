@@ -1,7 +1,7 @@
 Name:           libjpeg8
 Version:        8d1
 Release:        4
-Summary:        Independent JPEG Group's free JPEG software
+Summary:        Independent JPEG Group's free JPEG software Version 8
 
 License:        BSD
 URL:            http://www.infai.org/jpeg/

@@ -1,7 +1,7 @@
 Name:           libjpeg7
 Version:        7
 Release:        2
-Summary:        Independent JPEG Group's free JPEG software
+Summary:        Independent JPEG Group's free JPEG software Version 7
 
 License:        BSD
 URL:            http://www.infai.org/jpeg/
