@@ -5,7 +5,7 @@ Summary:        Independent JPEG Group's free JPEG software Version 9
 
 License:        BSD
 URL:            http://www.infai.org/jpeg/
-Source0:        http://www.ijg.org/files/jpegsrc.v9c.tar.gz
+Source0:        https://www.lunes.faith/SRPMS/jpegsrc.v9c.tar.gz
 
 %description
 JPEG library is a free library with functions for handling the JPEG
