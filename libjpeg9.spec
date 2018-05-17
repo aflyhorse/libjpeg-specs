@@ -1,11 +1,11 @@
 Name:           libjpeg9
-Version:        9b
-Release:        2
+Version:        9c
+Release:        1
 Summary:        Independent JPEG Group's free JPEG software Version 9
 
 License:        BSD
 URL:            http://www.infai.org/jpeg/
-Source0:        http://www.ijg.org/files/jpegsrc.v9b.tar.gz
+Source0:        http://www.ijg.org/files/jpegsrc.v9c.tar.gz
 
 %description
 JPEG library is a free library with functions for handling the JPEG
@@ -41,7 +41,7 @@ the libjpeg-turbo implementaion, since they provides different
 versions of binaries under the same name.
 
 %prep
-%setup -n jpeg-9b -q
+%setup -n jpeg-9c -q
 
 %build
 %configure --disable-static
@@ -53,6 +53,8 @@ sed -i 's|^runpath_var=LD_RUN_PATH|runpath_var=DIE_RPATH_DIE|g' libtool
 rm -rf $RPM_BUILD_ROOT
 %make_install
 find $RPM_BUILD_ROOT -name '*.la' -exec rm -f {} ';'
+# Fix broken pkgconfig version
+sed -i -E 's/^(Version:[\ \t]*)(\w+)\:(\w+)\:(\w+)/\1\2\.\3\.\4/g' ${RPM_BUILD_ROOT}/usr/lib64/pkgconfig/libjpeg.pc
 
 
 %post -p /sbin/ldconfig
@@ -75,12 +77,16 @@ LD_LIBRARY_PATH=${RPM_BUILD_ROOT}/%{_libdir} make check
 %doc example.c
 %{_includedir}/*
 %{_libdir}/*.so
+%{_libdir}/pkgconfig/libjpeg.pc
 
 %files utils
 %{_bindir}/*
 %{_mandir}/man1/*
 
 %changelog
+* Thu May 17 2018 aflyhorse@hotmail.com
+- Update to upstream v9c.
+- Add a version fix for pkgconfig file, thanks to everpcpc.
 * Sun Oct 9 2016 aflyhorse@hotmail.com
 - Conflict fix.
 * Sun Oct 9 2016 aflyhorse@hotmail.com
