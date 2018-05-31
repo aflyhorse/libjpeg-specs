@@ -1,6 +1,6 @@
 # What is this project?
 
-There are RPM spec files for [Independent JPEG Group](http://www.infai.org/jpeg/)'s libjpeg. JPEG library is a free library with functions for handling the JPEG image data format.
+There are RPM spec files for [Independent JPEG Group](http://ijg.org/)'s libjpeg. JPEG library is a free library with functions for handling the JPEG image data format.
 
 # Is it safe?
 
