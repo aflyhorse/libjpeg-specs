@@ -54,7 +54,7 @@ rm -rf $RPM_BUILD_ROOT
 %make_install
 find $RPM_BUILD_ROOT -name '*.la' -exec rm -f {} ';'
 # Fix broken pkgconfig version
-sed -i -E 's/^(Version:[\ \t]*)(\w+)\:(\w+)\:(\w+)/\1\2\.\3\.\4/g' ${RPM_BUILD_ROOT}/usr/lib64/pkgconfig/libjpeg.pc
+sed -i -E 's/^(Version:[\ \t]*)(\w+)\:(\w+)\:(\w+)/\1\2\.\3\.\4/g' ${RPM_BUILD_ROOT}/%{_libdir}/pkgconfig/libjpeg.pc
 
 
 %post -p /sbin/ldconfig
