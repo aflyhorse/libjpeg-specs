@@ -5,7 +5,7 @@ Summary:        Independent JPEG Group's free JPEG software Version 9
 
 License:        BSD
 URL:            http://www.infai.org/jpeg/
-Source0:        https://www.lunes.faith/SRPMS/jpegsrc.v9c.tar.gz
+Source0:        https://www.ijg.org/files/jpegsrc.v9c.tar.gz
 
 %description
 JPEG library is a free library with functions for handling the JPEG
@@ -84,6 +84,8 @@ LD_LIBRARY_PATH=${RPM_BUILD_ROOT}/%{_libdir} make check
 %{_mandir}/man1/*
 
 %changelog
+* Wed Dec 19 2018 aflyhorse@hotmail.com
+- Change the download link to https. No source change so no version bump.
 * Thu May 17 2018 aflyhorse@hotmail.com
 - Update to upstream v9c.
 - Add a version fix for pkgconfig file, thanks to everpcpc.
