@@ -7,6 +7,8 @@ License:        BSD
 URL:            http://www.infai.org/jpeg/
 Source0:        https://www.ijg.org/files/jpegsrc.v7.tar.gz
 
+BuildRequires:	gcc
+
 %description
 JPEG library is a free library with functions for handling the JPEG
 image data format.
