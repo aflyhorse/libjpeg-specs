@@ -8,13 +8,13 @@ Source files are directly fetched from [IJG's repository](https://www.ijg.org/fi
 
 # How to utilize this project?
 
-Binary packages (as well as SRPMS) is released at [COPR](https://copr.fedorainfracloud.org/coprs/aflyhorse/libjpeg/).
+Binary packages (as well as SRPMS) are released at [COPR](https://copr.fedorainfracloud.org/coprs/aflyhorse/libjpeg/).
 
 - libjpeg7 ![7status](https://copr.fedorainfracloud.org/coprs/aflyhorse/libjpeg/package/libjpeg7/status_image/last_build.png)
 - libjpeg8 ![8status](https://copr.fedorainfracloud.org/coprs/aflyhorse/libjpeg/package/libjpeg8/status_image/last_build.png)
 - libjpeg9 ![9status](https://copr.fedorainfracloud.org/coprs/aflyhorse/libjpeg/package/libjpeg9/status_image/last_build.png)
 
-# Why do we need this project?
+# Why do you create this project?
 
 The libjpeg coming with Fedora/CentOS project (libjpeg-turbo) only provides v6 implementation of JPEG (aka. libjpeg.so.62). This project is provided as dependencies for various projects which need libjpeg.so.7, libjpeg.so.8, etc.
 
