@@ -5,7 +5,7 @@ Summary:        Independent JPEG Group's free JPEG software Version 9
 
 License:        BSD
 URL:            http://www.infai.org/jpeg/
-%undefine	_disable_source_fetch
+%define _disable_source_fetch 0
 Source0:        https://www.ijg.org/files/jpegsrc.v9d.tar.gz
 
 BuildRequires:	gcc
