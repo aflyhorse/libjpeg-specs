@@ -1,12 +1,12 @@
 Name:           libjpeg9
-Version:        9d
+Version:        9e
 Release:        1
 Summary:        Independent JPEG Group's free JPEG software Version 9
 
 License:        BSD
-URL:            http://www.infai.org/jpeg/
+URL:            https://ijg.org/
 %define _disable_source_fetch 0
-Source0:        https://www.ijg.org/files/jpegsrc.v9d.tar.gz
+Source0:        https://ijg.org/files/jpegsrc.v9e.tar.gz
 
 BuildRequires:	gcc
 
@@ -87,6 +87,8 @@ LD_LIBRARY_PATH=${RPM_BUILD_ROOT}/%{_libdir} make check
 %{_mandir}/man1/*
 
 %changelog
+* Sun Jan 24 2022 aflyhorse@hotmail.com 9e-1
+- Update to upstream v9e.
 * Sun Mar 8 2020 aflyhorse@hotmail.com 9d-1
 - Update to upstream v9d.
 * Wed Dec 19 2018 aflyhorse@hotmail.com 9c-2
