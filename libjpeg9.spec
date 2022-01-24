@@ -44,7 +44,7 @@ the libjpeg-turbo implementaion, since they provides different
 versions of binaries under the same name.
 
 %prep
-%setup -n jpeg-9d -q
+%setup -n jpeg-9e -q
 
 %build
 %configure --disable-static
