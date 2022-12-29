@@ -16,7 +16,7 @@ Binary packages (as well as SRPMS) are released at [COPR](https://copr.fedorainf
 
 # Why do you create this project?
 
-The libjpeg coming with Fedora/CentOS project (libjpeg-turbo) only provides v6 implementation of JPEG (aka. libjpeg.so.62). This project is provided as dependencies for various projects which need libjpeg.so.7, libjpeg.so.8, etc.
+The libjpeg coming with Fedora/CentOS project (libjpeg-turbo) only provides v6 implementation of JPEG (aka. libjpeg.so.62). This project is provided as dependencies for various projects which need libjpeg.so.7, libjpeg.so.8 and libjpeg.so.9.
 
 The corresponding libjpeg package only provides library files, thus won't conflict with other versions, as well as the factory version. The -devel and -utils pacakge conflicts with each other, since they provide files under the same location.
 
